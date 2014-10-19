@@ -86,7 +86,8 @@ end
 
 group :test do
   gem "shoulda", "~> 3.3.2"
-  gem "shoulda-matchers", "1.4.1"
+  #gem "shoulda-matchers", "1.4.1"
+  gem "shoulda-matchers"
   gem "mocha", "~> 1.0.0", :require => 'mocha/api'
   if RUBY_VERSION >= '1.9.3'
     gem "capybara", "~> 2.1.0"
@@ -106,3 +107,5 @@ Dir.glob File.expand_path("../plugins/*/{Gemfile,PluginGemfile}", __FILE__) do |
   #TODO: switch to "eval_gemfile file" when bundler >= 1.2.0 will be required (rails 4)
   instance_eval File.read(file), file
 end
+
+gem "puma"
